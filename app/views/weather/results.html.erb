@@ -1,6 +1,7 @@
 
 
 
+<% if @weather_results.present? %>
 <div class="row mt-4 text-initial">
   <div class="offset-md-4 col-md-4">
     Current Temperature: <%= @weather_results.main.temp %>F 
@@ -18,6 +19,13 @@
     Cached Results? <%= @cache_exists ? "Yes" : "No" %>
   </div>
 </div>
+<% else %>
+<div class="row mt-4">
+  <div class="offset-md-4 col-md-4">
+    <h3>Sorry, that zipcode is invalid. Please try again with a valid zipcode.</h3>
+  </div>
+</div>
+<% end %>
 
 
 <%= render partial: 'form' %>
