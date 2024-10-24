@@ -43,5 +43,6 @@ The critical pieces of code for this application live in `app/controllers/weathe
 
 ### Improvements:
 1. In the short term, I'd like to improve the tests so that they are more idiomatic in following the minitest style guide. Long term I would upgrade to using rspec.
-2. Improve UI to present something more graphically friendly that reflects the results being returned, like for example the graphics and perhaps format of the WeatherStar 4k emulators: https://battaglia.ddns.net/twc/
+2. Improve tests so that API calls are mocked locally. 
+3. Improve UI to present something more graphically friendly that reflects the results being returned, like for example the graphics and perhaps format of the WeatherStar 4k emulators: https://battaglia.ddns.net/twc/
 
