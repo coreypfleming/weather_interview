@@ -41,8 +41,9 @@ The requirements requested an input address, however, to reduce complexity at th
 The critical pieces of code for this application live in `app/controllers/weather_controller.rb` and `app/views/weather/`.
 
 
-### Improvements:
+### Possible Future Improvements:
 1. In the short term, I'd like to improve the tests so that they are more idiomatic in following the minitest style guide. Long term I would upgrade to using rspec.
 2. Improve tests so that API calls are mocked locally. 
 3. Improve UI to present something more graphically friendly that reflects the results being returned, like for example the graphics and perhaps format of the WeatherStar 4k emulators: https://battaglia.ddns.net/twc/
+4. Improve UI so that it offers more functionality allowing users the ability to customize the results (e.g. units, other data available from request, forecast types, etc)
 
