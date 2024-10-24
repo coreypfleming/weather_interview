@@ -1,6 +1,26 @@
 
-<h1>Weather#results</h1>
-<p>Find me in app/views/weather/results.html.erb</p>
 
-<%= @cache_exists %>
-<%= @weather_results.main.temp %>
+
+<div class="row mt-4 text-initial">
+  <div class="offset-md-4 col-md-4">
+    Current Temperature: <%= @weather_results.main.temp %>F 
+  </div>
+  <div class="offset-md-4 col-md-4">
+    Max Temperature: <%= @weather_results.main.temp_max %>F 
+  </div>
+  <div class="offset-md-4 col-md-4">
+    Min Temperature: <%= @weather_results.main.temp_min %>F 
+  </div>
+  <div class="offset-md-4 col-md-4">
+    Zipcode: <%= @zipcode_param %>
+  </div>
+  <div class="offset-md-4 col-md-4">
+    Cached Results? <%= @cache_exists ? "Yes" : "No" %>
+  </div>
+</div>
+
+
+<%= render partial: 'form' %>
+
+
+
