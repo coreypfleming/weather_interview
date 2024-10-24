@@ -8,7 +8,6 @@ class WeatherControllerTest < ActionDispatch::IntegrationTest
 
   test "should get results" do
     get weather_results_url, params: { zipcode: "44102" }
-    byebug
     assert_response :success
   end
 end
