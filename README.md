@@ -4,9 +4,10 @@ Ruby Version: 3.3.0
 Rails Version: 7.2.1
 
 Add your weather api key at key `weather_api_key:`  to credentials
+
 ````
 editor=nano rails credentials:edit
-```
+````
 
 Run Tests
 
