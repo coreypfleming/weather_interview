@@ -38,6 +38,8 @@ rails test test/
 
 The requirements requested an input address, however, to reduce complexity at this time I opted to only request the zipcode from the user since this can directly interface with the weather API and allows us to avoid complexity and response time by either parsing the zipcode from a full-address string, or doing forward-location geocoding which would involve another API service call.
 
+The critical pieces of code for this application live in `app/controllers/weather_controller.rb` and `app/views/weather/`.
+
 
 ### Improvements:
 1. In the short term, I'd like to improve the tests so that they are more idiomatic in following the minitest style guide. Long term I would upgrade to using rspec.
