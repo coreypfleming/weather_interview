@@ -4,7 +4,7 @@ class WeatherController < ApplicationController
 
   def results
     @cache_exists = Rails.cache.exist?(zipcode_param)
-    @weather_results = Rails.cache.fetch(zipcode_param) do
+    @weather_results = Rails.cache.fetch(zipcode_param, expires_in: 30.minutes) do
       weather_client.current_zip(zipcode_param)
     end
   end
