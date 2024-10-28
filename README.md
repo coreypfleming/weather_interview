@@ -1,31 +1,47 @@
 # README
 
 Ruby Version: 3.3.0
+Node Version: >= 18
 Rails Version: 7.2.1
 
 ## Getting Started
 
-Pull down the repo locally and run bundle install 
+Pull down the repo locally and run package installers 
 
 ````
 git clone git@github.com:coreypfleming/weather_interview.git
 cd weather_interview/ 
 bundle install
+yarn install
 ````
 
 ### Weather API Key
 Sign up for an account and retrieve an API key from OpenWeather at https://home.openweathermap.org/users/sign_in
 
 Add your weather api key via credentials using the name  `weather_api_key`, e.g. `weather_api_key: 1234567...`
+For this, it will be easiest to simply remove the `config/credentials.yml.enc` and add your own by doing the following.
 
 ````
-editor=nano rails credentials:edit
+rm config/credentials.yml.enc
+EDITOR=nano rails credentials:edit
+#add your OpenWeather key and close the editor
+weather_api_key: 12346....
+````
+
+### Enable Caching
+
+Run the following 
+````
+rails dev:cache
 ````
 
 ### Launch server
 
 ````
 rails server
+# in separate terminals run the following to watch and build assets
+yarn build --watch
+yarn build:css --watch
 ````
 The app can now be visited locally by visiting http://localhost:3000
 
